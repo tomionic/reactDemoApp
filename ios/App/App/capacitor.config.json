@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "reactDemoApp",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}
