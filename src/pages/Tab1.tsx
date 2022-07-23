@@ -57,7 +57,7 @@ const Tab1: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Identity Vault</IonTitle>
+          <IonTitle>Identity Vault Test</IonTitle>
         </IonToolbar>
       </IonHeader>
 
