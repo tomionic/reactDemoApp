@@ -1,0 +1,6 @@
+{
+	"appId": "react.demo.app",
+	"appName": "reactDemoApp",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}

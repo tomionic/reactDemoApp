@@ -24,7 +24,7 @@ const getConfigUpdates = (lockType: LockType) => {
         case 'Biometrics':
         return {
             type: VaultType.DeviceSecurity,
-            deviceSecurityType: DeviceSecurityType.Biometrics,
+            deviceSecurityType: DeviceSecurityType.Both,
         };
         case 'SystemPasscode':
         return {

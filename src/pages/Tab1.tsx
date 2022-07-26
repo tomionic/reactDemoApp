@@ -146,7 +146,7 @@ const Tab1: React.FC = () => {
             <IonRadio value="NoLocking" />
           </IonItem>
           <IonItem>
-            <IonLabel>Use Biometrics</IonLabel>
+            <IonLabel>Use Both</IonLabel>
             <IonRadio disabled={!canUseBiometrics} value="Biometrics" />
           </IonItem>
           <IonItem>
