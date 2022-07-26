@@ -57,7 +57,7 @@ const Tab1: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Identity Vault</IonTitle>
+          <IonTitle>Identity Vault Test</IonTitle>
         </IonToolbar>
       </IonHeader>
 
@@ -97,7 +97,7 @@ const Tab1: React.FC = () => {
             <IonLabel>
               <div>Session Data: {session}</div>
               <div>Vault is Locked: {vaultIsLocked.toString()}</div>
-              <div>Vault Exists: {vaultExists}</div>
+              <div>Vault Empty: {vaultExists.toString()}</div>
             </IonLabel>
           </IonItem>
 
@@ -113,6 +113,14 @@ const Tab1: React.FC = () => {
             <div style={{ flex: 'auto' }}>
               <IonButton expand="block" onClick={unlockVault}>
                 Unlock Vault
+              </IonButton>
+            </div>
+          </IonItem>
+
+          <IonItem>
+            <div style={{ flex: 'auto' }}>
+              <IonButton expand="block" onClick={clearVault}>
+                Clear Vault
               </IonButton>
             </div>
           </IonItem>
@@ -138,7 +146,7 @@ const Tab1: React.FC = () => {
             <IonRadio value="NoLocking" />
           </IonItem>
           <IonItem>
-            <IonLabel>Use Biometrics</IonLabel>
+            <IonLabel>Use Both</IonLabel>
             <IonRadio disabled={!canUseBiometrics} value="Biometrics" />
           </IonItem>
           <IonItem>

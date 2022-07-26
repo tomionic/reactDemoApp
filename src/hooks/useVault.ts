@@ -24,7 +24,7 @@ const getConfigUpdates = (lockType: LockType) => {
         case 'Biometrics':
         return {
             type: VaultType.DeviceSecurity,
-            deviceSecurityType: DeviceSecurityType.Biometrics,
+            deviceSecurityType: DeviceSecurityType.Both,
         };
         case 'SystemPasscode':
         return {
@@ -58,7 +58,8 @@ export const useVault = () => {
     
       vault.onUnlock(() => setVaultIsLocked(false));
       vault.isLocked().then(setVaultIsLocked);
-      vault.doesVaultExist().then(setVaultExists);
+      //vault.doesVaultExist().then(setVaultExists);
+      vault.isEmpty().then(setVaultExists);
     
       return vault;
   }, []);
@@ -66,7 +67,8 @@ export const useVault = () => {
   const storeSession = async (value: string): Promise<void> => {
     setSession(value);
     await vault.setValue(key, value);
-    const exists = await vault.doesVaultExist();
+    //const exists = await vault.doesVaultExist();
+    const exists = await vault.isEmpty();
     setVaultExists(exists);
   };
 
@@ -94,7 +96,8 @@ export const useVault = () => {
     await vault.clear();
     setLockType('NoLocking');
     setSession(undefined);
-    const exists = await vault.doesVaultExist();
+    const exists = await vault.isEmpty();
+    console.log(exists);
     setVaultExists(exists);
   };
 
